@@ -63,24 +63,11 @@ const PayrollForm = (props) => {
         });
      }
 
-    //   const getDataById = (id) => {
-    //     employeeService
-    //       .getEmployee(id)
-    //       .then((data) => {
-    //         console.log("data is ", data.data);
-    //         let obj = data.data;
-    //         //console.log("obj id inside get id method: "+obj.employee_id);
-    //         setData(obj);
-    //       })
-    //       .catch((err) => {
-    //         console.log("err is ", err);
-    //       });
-    //   };
     
     const setData = (obj) => {
         console.log("object" , obj);
         console.log("Object id while setform call "+obj.employeeId);
-        //console.log("StartDate "+obj.startDate);
+        
         let array = obj.startDate.split("-");
         setForm({
           ...formValue,
@@ -115,11 +102,6 @@ const PayrollForm = (props) => {
         return formValue.departmentValue && formValue.departmentValue.includes(name);
     }
 
-    // const stringbyDate = (date) => {
-    //     const options = {day: 'numeric', month: 'short', year: 'numeric'};
-    //     const newDate = !date ? "undefined" : new Date(Date.parse(date)).toLocaleDateString('en-IN', options);
-    //     return newDate;
-    //  };
      
     const Validations = async () => {
         let isError = false;
@@ -157,9 +139,7 @@ const PayrollForm = (props) => {
         var month = formValue.month.valueOf();
         var year = formValue.year.valueOf();
         var date = new Date(day+"-"+month+"-"+year);
-        //console.log("Date here :"+date);
         var nowDate = Date.now();
-        //console.log(" Check Date here :"+nowDate);
         if(date>nowDate){
             error.startDate = "StartDate is a future Date!!"
             isError = true;
@@ -189,31 +169,20 @@ const PayrollForm = (props) => {
             employeeId: formValue.employeeId,
             profilePic: formValue.profilePic,
           };
-        //   let object1 = {
-        //     name: formValue.name,
-        //     department: formValue.departmentValue,
-        //     gender: formValue.gender,
-        //     salary: formValue.salary,
-        //     startDate: `${formValue.day}-${formValue.month}-${formValue.year}`,
-        //     notes: formValue.notes,
-        //     profilePic: formValue.profilePic,
-        //   };
+    
           console.log(formValue);
-         // const employeeid= formValue.id;
-         // console.log(employeeid);
+        
           if (formValue.isUpdate) {
               console.log("Updating object with id :"+formValue.employeeId);
               console.log("id=",object.employeeId);
             employeeService
-              //.updateEmployee(employeeid, object1)
+              
               .updateEmployee(object)
               .then((data) => {
                 console.log("data after update", data.data);
     
                 props.history.push("");
-                //   }else{
-                //       window.location.reload();
-                //   }
+                
               })
               .catch((error) => {
                 alert("WARNING!! Error updating the data!");

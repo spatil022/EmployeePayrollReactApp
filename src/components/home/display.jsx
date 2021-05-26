@@ -14,17 +14,7 @@ const Display = (props) => {
   const update = (employeeId) => {
     props.history.push(`payroll-form/${employeeId}`);
   };
-  // const update = (employeeId) => {
-  //   let result = window.confirm("Are you sure you want to update?")
-  //   if (result) {
-  //     props.history.push(`payroll-form/${employeeId}`);
-  //   }
-  //   else {
-  //     window.location.reload();
-  //   }
-  // };
- 
-
+  
   const remove = (employeeId) => {
     employeeService.deleteEmployee(employeeId).then(data => {
         console.log("data after delete", data);

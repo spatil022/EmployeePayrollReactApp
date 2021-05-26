@@ -1,5 +1,4 @@
 import React from "react";
-//import searchIcon from "../../assets/icons/create-black-18dp.svg";
 import addIcon from "../../assets/icons/add-24px.svg";
 import "./employee-home.scss";
 import EmployeeService from "../../services/employee-payroll-service";
@@ -19,9 +18,7 @@ export default class Home extends React.Component {
     };
     
   }
-  // openSearch = () => {
-  //   this.setState({ searchExpand: true });
-  // };
+ 
   componentDidMount() {
     this.getAllEmployee();
   }
@@ -44,19 +41,7 @@ export default class Home extends React.Component {
       });
   };
 
-  // search = async (event) => {
-  //   let search = event.target.value;
-    
-  //   await this.setState({ employeeArray: this.state.AllEmployeeArray });
-  //   let empArray = this.state.employeeArray;
-  //   if (search.trim().length > 0)
-  //     empArray = empArray.filter(
-  //       (element) =>
-  //         element.name.toLowerCase().indexOf(search.toLowerCase()) > -1
-  //     );
-    
-  //   this.setState({ employeeArray: empArray });
-  // };
+ 
   render() {
     return (
       <div>
@@ -75,17 +60,6 @@ export default class Home extends React.Component {
               Employee Details <div className="count"></div>
             </div>
             
-              {/* <div className="search-box" onClick={this.openSearch}>
-                <input
-                  className={
-                    "input " + (this.state.searchExpand && "input-expand")
-                  }
-                  onChange={this.search}
-                  type="text"
-                  placeholder=""
-                />
-                <img className="search-icon" src={searchIcon} alt="" />
-              </div> */}
               <Link to="payroll-form" className="add-button" >
                 <img src={addIcon} alt="" /> Add User
               </Link>
@@ -94,7 +68,7 @@ export default class Home extends React.Component {
             <Display
               employeeArray={this.state.employeeArray}
               childtoParent={this.recivedMessage}
-              // getAllEmployee={this.getAllEmployee}
+              
             />
           </div>
         </div>
