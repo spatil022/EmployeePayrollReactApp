@@ -1,0 +1,70 @@
+{
+  "employee": [
+    {
+      "name": "Raju",
+      "department": [
+        "HR",
+        "Finance"
+      ],
+      "gender": "male",
+      "salary": "60000",
+      "startDate": "18-10-2016",
+      "notes": "gftr",
+      "profilePic": "../../assets/Ellipse-3.png",
+      "id": 1604589594401
+    },
+    {
+      "name": "Ankita",
+      "department": [
+        "Sales",
+        "HR"
+      ],
+      "gender": "female",
+      "salary": "50000",
+      "startDate": "20-11-2017",
+      "notes": "gjyasgt",
+      "id": 1604589594403,
+      "profilePic": "../../assets/Ellipse-1.png"
+    },
+    {
+      "name": "Pratik",
+      "department": [
+        "HR",
+        "Sales",
+        "Finance",
+        "Engineer"
+      ],
+      "gender": "male",
+      "salary": "90000",
+      "startDate": "19-06-2017",
+      "notes": "jyfyt",
+      "profilePic": "../../assets/Ellipse-3.png",
+      "id": 1604589594404
+    },
+    {
+      "name": "Rita",
+      "department": [
+        "Engineer"
+      ],
+      "gender": "female",
+      "salary": "60000",
+      "startDate": "18-10-2016",
+      "notes": "sde",
+      "id": 1604589594405,
+      "profilePic": "../../assets/Ellipse-7.png"
+    },
+    {
+      "name": "Rohan",
+      "department": [
+        "HR",
+        "Sales"
+      ],
+      "gender": "male",
+      "salary": "8000",
+      "startDate": "18-10-2016",
+      "notes": "kwdj",
+      "id": 1604589594406,
+      "profilePic": "../../assets/Ellipse-8.png"
+    }
+  ]
+}
